@@ -1,0 +1,496 @@
+/* google-font import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500;700;900&family=Varela+Round&display=swap');
+
+/* general style */
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    list-style: none;
+    font-family: 'montserrat',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    
+    /*
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-padding-top:6rem;
+    */
+}
+section{
+    padding: 3rem 5%;
+}
+
+/* css variable */
+:root{
+    --light-color:#808080;
+    --light-bg:#f5f5f8;
+    --google-color:#4285f4;
+    --twitter-color:#1da1f2;
+    --youtube-color:#ff0000;
+    --linkedin-color:#0e76a8;          
+}
+
+/* common style */
+.text-none{
+    text-decoration: none;
+}
+.text-capitalize{
+    text-transform:capitalize;
+}
+.text-uppercase{
+    text-transform:uppercase;
+}
+.text-white{
+    color:white;
+}
+.p-t-b{
+    padding: 10px 0;
+}
+.sec-header{
+    text-align: center;
+    font-size: 1.8rem;
+    padding-bottom: 40px;
+    font-weight: 500;
+}
+.mg15-t-p{
+    margin:15px 0
+}
+.p8-t{
+    padding-top:5px;
+}
+.m8-t{
+    padding-top:8px
+}
+/* header */
+header{
+    width:100%;
+    height:70px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    
+}
+header.active{
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+header.active .navbrand h2,
+header.active .lists a,
+header.active .menu
+{
+    color:black
+}
+.navbar{
+    
+    width:90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.lists {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.lists a{
+    display: block;
+    font-size: 1.2rem;
+}
+.menu{
+    color:white;
+    font-size:2rem;
+    display: none;
+}
+
+/* main */
+.back-img{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.main-heading{
+    font-size: 2.5rem;
+    
+}
+.main-btn{
+    background-color:transparent;
+    font-size: 1.5rem;
+    padding:1rem 2rem;
+    border:0.1rem solid white;
+    border-radius: 10rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.main-btn:hover{
+    background-color: black;
+    color:white;
+}
+
+/* about-section */
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap:2rem;
+    /* instead of below style , i used the previous style 
+    grid-template-columns: 50% 50%;
+    /*
+
+    /* instead of this style i have added styles to section tag in general style
+    width: 90%;
+    margin:  40px auto;
+    */
+}
+
+/*
+.about-img-container{
+    height:40rem;
+}
+*/
+.about-p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color:var(--light-color)
+}
+.about-img-container img{
+    max-width: 100%;
+
+}
+
+/* services-section*/
+.services{
+    background:var(--light-bg);
+}
+.sec-container{
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));
+    gap:3rem;
+   
+
+}
+.sec-card{
+   
+    border-radius:1rem;
+    text-align:center;
+    padding:20px 8px 10px 8px ;
+    transition: 0.5s;
+    background-color:white;
+}
+.sec-card:hover{
+    background-color: black;
+    color:white;
+}
+.sec-card:hover img{
+    filter: invert(100%);
+}
+.sec-card p{
+    line-height: 1.2;
+    color: var(--light-color);
+}
+/*       */
+
+/* works-section */
+.works-container{
+    position:relative;
+    overflow-y: hidden;
+    
+}
+.work-img-container{
+    height:19rem;
+    
+}
+.work-img-container img{
+    width: 100%;
+    height:100%;
+}
+.work-project{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    max-width:100%;
+    background-color: black;
+    color:white;
+    text-align:center;
+    padding:8px 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+.works-container:hover .work-project{
+    transform: translateY(0);
+}
+
+/* contact-section */
+.contact{
+    background: var(--light-bg);
+}
+.contact-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.ls-contact span{
+    display: block;
+    color: var(--light-color);
+}
+form{
+    flex:1 1 42rem;
+}
+.first-line-contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form input{
+    width: 49%;
+    padding: 4px 0 4px 8px;
+    border-radius:2rem ;
+    
+}
+form textarea{
+    width:100%;
+    padding: 4px 0 4px 8px;
+    margin: 10px 0;
+    resize:none;
+}
+.contact-btn{
+    padding: 4px 9px;
+    border-radius: 3rem;
+    font-size: 1.1rem;
+}
+.contact-btn:hover{
+    background-color: black;
+    color:white;
+}
+
+/* footer-section */
+footer{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer-container{
+    padding:5rem 0;
+}
+footer h3 {
+    color:black;
+    
+}
+footer h3 span{
+    color:var(--light-color)
+}
+.footer-container p{
+    color: var(--light-color);
+    width: 40%;
+    margin: 10px auto;
+}
+.footer-icon{
+    font-size: 2rem;
+    padding: 3px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #ddd5d5;
+}
+.fac{
+    color:var(--google-color)
+}
+.fac:hover{
+    background-color:var(--google-color);
+    color:white
+}
+.what{
+    color:rgb(129, 199, 24)
+}
+.what:hover{
+    background-color:rgb(129, 199, 24);
+    color:white
+}
+.twitt{
+    color:var(--twitter-color)
+}
+.twitt:hover{
+    background-color:var(--twitter-color);
+    color:white
+}
+.linkd{
+    color:var(--linkedin-color)
+}
+.linkd:hover{
+    background-color:var(--linkedin-color);
+    color:white;
+}
+
+
+/* media queries */
+@media(max-width:1200px){
+    .navbar{
+        width:95%
+    }
+    section{
+        padding: 2rem 2.5%;
+    }
+}
+@media(max-width:768px){
+    .navbrand h2{
+        font-size:100%;
+    }
+    .main-heading{
+        font-size:160%;
+    }
+    .main-p{
+        font-size:0.6rem;
+    }
+    .main-btn{
+        font-size:0.9rem;
+        padding:0.5rem
+    }
+    .menu{
+        display: block;
+    }
+    .lists{
+        flex-direction: column;
+        position: fixed;
+        top:6rem;
+        right:0;
+        left:0;
+        background-color: #ffffff;
+        width: 100%;
+        text-align: center;
+        transform: translateX(100%);
+        transition: 0.5s;
+        height:calc(100vh - 30vh);
+    }
+     .show{
+        transform: translateX(0); 
+    }
+    .lists  a{
+        
+        margin: 0.7% 0;
+        font-size: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+}
+@media(max-width:420px){
+    
+    body{
+        font-size: 72%;
+    }
+    .menu{
+        display: block;
+        font-size: 0.7rem;
+    }
+    .lists a{
+        font-size: 90%;
+    }
+    .main-btn{
+        font-size:0.5rem;
+        padding:0.3rem
+    }
+    .sec-header{
+        font-size: 90%;
+    }
+    
+    .about-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+        gap:1rem;
+    }
+    .about-p{
+        font-size: 90%;
+    }
+    .sec-container{
+    
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));
+        gap:2rem;
+       
+    
+    }
+    .sec-card img{
+        width:10%
+    }
+    .sec-card h3{
+        font-size:90%
+    }
+    .contact-btn {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+    }
+    .footer-icon{
+        font-size: 0.8rem;
+    }
+}
+@media(max-width:250px){
+    .navbrand h2{
+        font-size:60%;
+    }
+    .main-heading{
+        font-size:85%;
+    }
+    .main-p{
+        font-size:0.5rem;
+    }
+    .main-btn{
+        font-size:0.7rem;
+        padding:0.4rem
+    }
+    .menu{
+        display: block;
+        font-size: 0.6rem;
+    }
+    .about-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(9rem,1fr));
+        gap:1rem;
+    }
+    .sec-container{
+    
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(8rem,1fr));
+        gap:3rem;
+       
+    
+    }
+    .ls-contact .email-contact span{
+        width:90%;
+        word-wrap: break-word;
+    }
+}
+@media(max-width:180px){
+    .about-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6.2rem,1fr));
+        gap:1rem;
+    }
+    .sec-container{
+    
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(4rem,1fr));
+        gap:3rem;
+       
+    
+    }
+}
