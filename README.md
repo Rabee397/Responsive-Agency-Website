@@ -7,4 +7,4 @@
 2.on bars icon : after clicking it to make the nav lists show up , and disapear after clicking on times icon.
 
 #please if you see the website and notice any problem on it , or on the code , i would be happy if you tell me ,
-just send me message ,  email: rabie201097_1_11@hotmail.com   ||| whatsapp : +249113583477
+just send me message ,  email: rabie201097_1_11@hotmail.com   ||| whatsapp: https://wa.me/+249113583477
